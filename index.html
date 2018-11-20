@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>- Vacation Budget Pricer -</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="navb">
+        <nav class="navbar navbar-expand-md justify-content-md-center justify-content-start" id="topstuff">
+          <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+            <ul class="navbar-nav mx-auto text-md-center text-left">
+              <li class="nav-item">
+                <a class="nav-link">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Change Pass</a>
+              </li>
+              <li class="nav-item my-auto">
+                <h1 class="nav-link navbar-brand mx-0 d-none d-md-inline">Vacation Budget Planner</h1>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Sign In</a>
+              </li>
+              <li class="nav-item">
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="main">
+        <div class="innermain">
+          <p>Welcome to the vacation budget planner. If this is your first time joining us, register now. If you already have registered, make sure to login to begin your budget planning adventures!</p>
+          <button>Grab all saved budget plans</button>
+          <button>New budget plan</button>
+          <button>Edit a budget plan</button>
+          <button>Delete a budget plan</button>
+
+          <div class="budgetform">
+            <form>
+              <fieldset>
+                <p>Type of trip:</p>
+                <input type="radio" name="planeorcar" value="Airplane"> Airplane<br>
+                <input type="radio" name="planeorcar" value="Car"> Car
+                <p>Staying in a hotel?</p>
+                <input type="radio" name="anyhotel" value="Yes"> Yes<br>
+                <input type="radio" name="anyhotel" value="No"> No
+                <p>Price per ticket:</p>
+                <input type="number" name="ticketprice" placeholder="Ticket price">
+                <p>Number of tickets:</p>
+                <input type="number" name="amountofticket" placeholder="Number of tickets">
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="budget">
+
+      </div>
+    </body>
+</html>
