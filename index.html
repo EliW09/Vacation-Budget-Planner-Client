@@ -20,19 +20,19 @@
           <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
             <ul class="navbar-nav mx-auto text-md-center text-left">
               <li class="nav-item">
-                <a class="nav-link">Sign Up</a>
+                <a class="nav-link" id="sign-upbtn">Sign Up</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Change Pass</a>
+                <a class="nav-link" id="change-passwordbtn">Change Pass</a>
               </li>
               <li class="nav-item my-auto">
                 <h1 class="nav-link navbar-brand mx-0 d-none d-md-inline">Vacation Budget Planner</h1>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Logout</a>
+                <a class="nav-link" id="log-outbtn">Logout</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Sign In</a>
+                <a class="nav-link" id="sign-inbtn">Sign In</a>
               </li>
               <li class="nav-item">
               </li>
@@ -52,19 +52,109 @@
           <div class="budgetform">
             <form>
               <fieldset>
-                <p>Type of trip:</p>
-                <input type="radio" name="planeorcar" value="Airplane"> Airplane<br>
-                <input type="radio" name="planeorcar" value="Car"> Car
-                <p>Staying in a hotel?</p>
+                <!-- All Questions -->
+                <label for="planecartrain">Type of trip:</label><br>
+                <input type="radio" name="planecartrain" value="Airplane"> Airplane<br>
+                <input type="radio" name="planecartrain" value="Car"> Car<br>
+                <input type="radio" name="planecartrain" value="Train"> Train<br>
+
+                <label for="anyhotel">Staying in a hotel:</label><br>
                 <input type="radio" name="anyhotel" value="Yes"> Yes<br>
-                <input type="radio" name="anyhotel" value="No"> No
-                <p>Price per ticket:</p>
-                <input type="number" name="ticketprice" placeholder="Ticket price">
-                <p>Number of tickets:</p>
-                <input type="number" name="amountofticket" placeholder="Number of tickets">
+                <input type="radio" name="anyhotel" value="No"> No<br>
+
+                <label for="rentcar">Getting a rental car:</label><br>
+                <input type="radio" name="rentcar" value="Yes"> Yes<br>
+                <input type="radio" name="rentcar" value="No"> No<br>
+
+                <label for="parksandevents">Going to any parks or events:</label><br>
+                <input type="radio" name="parksandevents" value="Yes"> Yes<br>
+                <input type="radio" name="parksandevents" value="No"> No<br>
+                <!-- END -->
+
+                <!-- Plane & Train forms -->
+                <label for="ticketprice">Ticket price:</label>
+                <input type="number" name="ticketprice" placeholder="325">
+                <label for="amountofticket">Number of tickets:</label>
+                <input type="number" name="amountofticket" placeholder="1">
+                <!-- END -->
+
+                <!-- Car forms -->
+                <label for="cardistance">Miles to drive:</label>
+                <input type="number" name="cardistance" placeholder="50">
+                <label for="milespergallon">Miles per gallon:</label>
+                <input type="number" name="milespergallon" placeholder="22">
+                <!-- END -->
+
+                <!-- Rental Car forms -->
+                <label for="rentalprice">Rental car price per day:</label>
+                <input type="number" name="rentalprice" placeholder="75">
+                <label for-"rentaldays">Days using rental:</label>
+                <input type="number" name="rentaldays" placeholder="3">
+                <!-- END -->
+
+                <!-- Hotel forms -->
+                <label for="hotelprice">Price per night for hotel:</label>
+                <input type="number" name="hotelprice" placeholder="79">
+                <label for="nights">Nights staying:</label>
+                <input type="number" name="nights" placeholder="2">
+                <label for="rooms">How many rooms:</label>
+                <input type="number" name="rooms" placeholder="1">
+                <!-- END -->
+
+                <!-- Parks and Events forms -->
+                <label for="parksandeventsprice">Admissions price:</label>
+                <input type="number" name="parksandeventsprice" placeholder="140">
+                <label for="pandepeople">People attending:</label>
+                <input type="number" name="pandepeople" placeholder="2">
+                <!-- END -->
+
+                <!-- Extra forms -->
+                <label for="peoplegoing">People going on the trip:</label>
+                <input type="number" name="peoplegoing" placeholder="1">
+                <label for="daysstaying">Days staying:</label>
+                <input type="number" name="daysstaying" placeholder="3">
+                <!-- END -->
               </fieldset>
             </form>
           </div>
+        </div>
+      </div>
+
+      <div class="login-page">
+        <div class="form">
+          <form id="sign-up">
+            <input type="text" name="credentials[email]" placeholder="Email" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="password" name="credentials[password_confirmation]"
+                   placeholder="Confirm Password">
+            <button>Register</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form id="sign-in">
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <button>Connect</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="account-page">
+        <div class="accpage">
+          <form id="change-password">
+            <p id="accemail"></p>
+            <p>Change your password</p>
+            <fieldset>
+              <input type="password" name="passwords[old]" placeholder="Old password">
+              <input type="password" name="passwords[new]" placeholder="New password">
+              <input class="btn btn-outline-success" type="submit" value="Change password">
+            </fieldset>
+          </form>
+          <form id="sign-out">
+             <fieldset>
+               <input class="btn btn-outline-success" type="submit" value="Sign out">
+             </fieldset>
+          </form>
         </div>
       </div>
 
