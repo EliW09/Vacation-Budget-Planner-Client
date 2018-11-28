@@ -19,21 +19,15 @@
           </button>
           <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
             <ul class="navbar-nav mx-auto text-md-center text-left">
-              <li class="nav-item">
-                <a class="nav-link" id="sign-upbtn">Sign Up</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="change-passwordbtn">Change Pass</a>
-              </li>
               <li class="nav-item my-auto">
                 <h1 class="nav-link navbar-brand mx-0 d-none d-md-inline">Vacation Budget Planner</h1>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="log-outbtn">Logout</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="sign-inbtn">Sign In</a>
-              </li>
+              <a class="nav-link" id="acc">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="goBack">Go Back</a>
+            </li>
               <li class="nav-item">
               </li>
             </ul>
@@ -41,79 +35,227 @@
         </nav>
       </div>
 
+      <div class="auth">
+        <div class="innerauth">
+          <p id="authmessage"></p>
+        </div>
+      </div>
+
       <div class="main">
         <div class="innermain">
-          <p>Welcome to the vacation budget planner. If this is your first time joining us, register now. If you already have registered, make sure to login to begin your budget planning adventures!</p>
-          <button>Grab all saved budget plans</button>
-          <button>New budget plan</button>
-          <button>Edit a budget plan</button>
-          <button>Delete a budget plan</button>
+          <button id="grabbudgets">All budget plans</button>
+          <button id="newbudget">New budget plan</button>
+          <button id="editbudget">Edit a plan</button>
+          <button id="deletebudget">Delete a plan</button>
+          <br>
+          <hr>
+
+          <!-- :type_of_trip, :hotel, :rental_car, :events_and_parks, :ticketprice, :ticketamount, :miles_to_drive, :miles_per_gallon, :hotelnights, :nightprice, :rooms, :rentaldays, :rentalprice, :eventprice, :eventpeople, :tripdays, :extrapurchase, :user_id -->
+
+          <div class="grabBudgetForm">
+            <form id="grabform">
+              <!-- Stuff here -->
+              <button id="grab">Grab budgets</button>
+              <div id="trips" class="trips"></div>
+            </form>
+          </div>
+
+          <div class="editBudgetForm">
+            <form id="editform">
+              <fieldset>
+                <div id="0-e">
+                <label for="type_of_trip">Type of trip:</label><br>
+                <input type="radio" name="trip[type_of_trip]" value="Airplane" id="plane-e"> Airplane<br>
+                <input type="radio" name="trip[type_of_trip]" value="Car" id="car-e"> Car<br>
+                <input type="radio" name="trip[type_of_trip]" value="Train" id="train-e"> Train<br>
+
+                <div id="planestuff-e">
+                <!-- Plane & Train forms -->
+                  <label for="ticketprice">Ticket price:</label>
+                  <input type="number" name="trip[ticketprice]" placeholder="325">
+                  <label for="ticketamount">Number of tickets:</label>
+                  <input type="number" name="trip[ticketamount]" placeholder="1">
+                <!-- END -->
+                </div>
+
+                <div id="carstuff-e">
+                <!-- Car forms -->
+                  <label for="miles_to_drive">Miles to drive:</label>
+                  <input type="number" name="trip[miles_to_drive]" placeholder="50">
+                  <label for="miles_per_gallon">Miles per gallon:</label>
+                  <input type="number" name="trip[miles_per_gallon]" placeholder="22">
+                <!-- END -->
+                </div>
+                </div>
+
+                <div id="1-e">
+                <label for="hotel">Staying in a hotel:</label><br>
+                <input type="radio" name="trip[hotel]" value="Yes" id="hotelyes-e" > Yes<br>
+                <input type="radio" name="trip[hotel]" value="No" id="hotelno-e"> No<br>
+
+                <div id="hotelst-e">
+                <!-- Hotel forms -->
+                  <label for="nightprice">Price per night for hotel:</label>
+                  <input type="number" name="trip[nightprice]" placeholder="79">
+                  <label for="hotelnights">Nights staying:</label>
+                  <input type="number" name="trip[hotelnights]" placeholder="2">
+                  <label for="rooms">How many rooms:</label>
+                  <input type="number" name="trip[rooms]" placeholder="1">
+                <!-- END -->
+                </div>
+                </div>
+
+                <div id="2-e">
+                <label for="rental_car">Getting a rental car:</label><br>
+                <input type="radio" name="trip[rental_car]" value="Yes" id="rentalyes-e" > Yes<br>
+                <input type="radio" name="trip[rental_car]" value="No" id="rentalno-e"> No<br>
+
+                <div id="rentalstuff-e">
+                <!-- Rental Car forms -->
+                  <label for="rentalprice">Rental car price per day:</label>
+                  <input type="number" name="trip[rentalprice]" placeholder="75">
+                  <label for-"rentaldays">Days using rental:</label>
+                  <input type="number" name="trip[rentaldays]" placeholder="3">
+                <!-- END -->
+                </div>
+                </div>
+
+                <div id="3-e">
+                <label for="events_and_parks">Going to any parks or events:</label><br>
+                <input type="radio" name="trip[events_and_parks]" value="Yes" id="eventyes-e" > Yes<br>
+                <input type="radio" name="trip[events_and_parks]" value="No" id="eventno-e"> No<br>
+
+                <div id="eventstuff-e">
+                <!-- Parks and Events forms -->
+                  <label for="eventprice">Admissions price:</label>
+                  <input type="number" name="trip[eventsprice]" placeholder="140">
+                  <label for="eventpeople">People attending:</label>
+                  <input type="number" name="trip[eventpeople]" placeholder="2">
+                <!-- END -->
+                </div>
+                </div>
+
+                <div id="4-e">
+                <label for="extrapurchase">Extra money for gifts:</label>
+                <input type="number" name="trip[extrapurchase]" placeholder="1">
+                <label for="tripdays">Days staying:</label>
+                <input type="number" name="trip[tripdays]" placeholder="3">
+                <br>
+                <label for="id">ID:</label>
+                <input type='text' name='trip[id]' placeholder="1">
+                <button>Submit</button>
+                </div>
+
+                <form id="bandn-e">
+                  <fieldset>
+                    <button id="back-e"><</button>
+                    <button id="next-e">></button>
+                  </fieldset>
+                </form>
+              </fieldset>
+            </form>
+          </div>
+
+          <div class="deleteBudgetForm">
+            <form id="deletetrip">
+              <fieldset>
+                <label for="id">ID:</label>
+                <input type='text' name='trip[id]' placeholder="1">
+                <button>Delete</button>
+              </fieldset>
+            </form>
+          </div>
 
           <div class="budgetform">
-            <form>
+            <form id="tripform">
               <fieldset>
-                <!-- All Questions -->
-                <label for="planecartrain">Type of trip:</label><br>
-                <input type="radio" name="planecartrain" value="Airplane"> Airplane<br>
-                <input type="radio" name="planecartrain" value="Car"> Car<br>
-                <input type="radio" name="planecartrain" value="Train"> Train<br>
+                <div id="0">
+                <label for="type_of_trip">Type of trip:</label><br>
+                <input type="radio" name="trip[type_of_trip]" value="Airplane" id="plane" > Airplane<br>
+                <input type="radio" name="trip[type_of_trip]" value="Car" id="car"> Car<br>
+                <input type="radio" name="trip[type_of_trip]" value="Train" id="train"> Train<br>
 
-                <label for="anyhotel">Staying in a hotel:</label><br>
-                <input type="radio" name="anyhotel" value="Yes"> Yes<br>
-                <input type="radio" name="anyhotel" value="No"> No<br>
-
-                <label for="rentcar">Getting a rental car:</label><br>
-                <input type="radio" name="rentcar" value="Yes"> Yes<br>
-                <input type="radio" name="rentcar" value="No"> No<br>
-
-                <label for="parksandevents">Going to any parks or events:</label><br>
-                <input type="radio" name="parksandevents" value="Yes"> Yes<br>
-                <input type="radio" name="parksandevents" value="No"> No<br>
-                <!-- END -->
-
+                <div id="planestuff">
                 <!-- Plane & Train forms -->
-                <label for="ticketprice">Ticket price:</label>
-                <input type="number" name="ticketprice" placeholder="325">
-                <label for="amountofticket">Number of tickets:</label>
-                <input type="number" name="amountofticket" placeholder="1">
+                  <label for="ticketprice">Ticket price:</label>
+                  <input type="number" name="trip[ticketprice]" value="0" id="ticketprice">
+                  <label for="ticketamount">Number of tickets:</label>
+                  <input type="number" name="trip[ticketamount]" value="0" id="numberoftickets">
                 <!-- END -->
+                </div>
 
+                <div id="carstuff">
                 <!-- Car forms -->
-                <label for="cardistance">Miles to drive:</label>
-                <input type="number" name="cardistance" placeholder="50">
-                <label for="milespergallon">Miles per gallon:</label>
-                <input type="number" name="milespergallon" placeholder="22">
+                  <label for="miles_to_drive">Miles to drive:</label>
+                  <input type="number" name="trip[miles_to_drive]" value="50" id="miles">
+                  <label for="miles_per_gallon">Miles per gallon:</label>
+                  <input type="number" name="trip[miles_per_gallon]" value="25" id="mpg">
                 <!-- END -->
+                </div>
+                </div>
 
-                <!-- Rental Car forms -->
-                <label for="rentalprice">Rental car price per day:</label>
-                <input type="number" name="rentalprice" placeholder="75">
-                <label for-"rentaldays">Days using rental:</label>
-                <input type="number" name="rentaldays" placeholder="3">
-                <!-- END -->
+                <div id="1">
+                <label for="hotel">Staying in a hotel:</label><br>
+                <input type="radio" name="trip[hotel]" value="Yes" id="hotelyes" > Yes<br>
+                <input type="radio" name="trip[hotel]" value="No" id="hotelno"> No<br>
 
+                <div id="hotelstuff">
                 <!-- Hotel forms -->
-                <label for="hotelprice">Price per night for hotel:</label>
-                <input type="number" name="hotelprice" placeholder="79">
-                <label for="nights">Nights staying:</label>
-                <input type="number" name="nights" placeholder="2">
-                <label for="rooms">How many rooms:</label>
-                <input type="number" name="rooms" placeholder="1">
+                  <label for="nightprice">Price per night for hotel:</label>
+                  <input type="number" name="trip[nightprice]" value="0" id="nightcost">
+                  <label for="hotelnights">Nights staying:</label>
+                  <input type="number" name="trip[hotelnights]" value="0" id="nightstay">
+                  <label for="rooms">How many rooms:</label>
+                  <input type="number" name="trip[rooms]" value="0" id="rooms">
                 <!-- END -->
+                </div>
+                </div>
 
+                <div id="2">
+                <label for="rental_car">Getting a rental car:</label><br>
+                <input type="radio" name="trip[rental_car]" value="Yes" id="rentalyes" > Yes<br>
+                <input type="radio" name="trip[rental_car]" value="No" id="rentalno"> No<br>
+
+                <div id="rentalstuff">
+                <!-- Rental Car forms -->
+                  <label for="rentalprice">Rental car price per day:</label>
+                  <input type="number" name="trip[rentalprice]" value="0" id="rentday">
+                  <label for-"rentaldays">Days using rental:</label>
+                  <input type="number" name="trip[rentaldays]" value="0" id="rentdays">
+                <!-- END -->
+                </div>
+                </div>
+
+                <div id="3">
+                <label for="events_and_parks">Going to any parks or events:</label><br>
+                <input type="radio" name="trip[events_and_parks]" value="Yes" id="eventyes" > Yes<br>
+                <input type="radio" name="trip[events_and_parks]" value="No" id="eventno"> No<br>
+
+                <div id="eventstuff">
                 <!-- Parks and Events forms -->
-                <label for="parksandeventsprice">Admissions price:</label>
-                <input type="number" name="parksandeventsprice" placeholder="140">
-                <label for="pandepeople">People attending:</label>
-                <input type="number" name="pandepeople" placeholder="2">
+                  <label for="eventprice">Admissions price:</label>
+                  <input type="number" name="trip[eventsprice]" value="0" id="eventpprice">
+                  <label for="eventpeople">People attending:</label>
+                  <input type="number" name="trip[eventpeople]" value="0" id="eventppeople">
                 <!-- END -->
+                </div>
+                </div>
 
-                <!-- Extra forms -->
-                <label for="peoplegoing">People going on the trip:</label>
-                <input type="number" name="peoplegoing" placeholder="1">
-                <label for="daysstaying">Days staying:</label>
-                <input type="number" name="daysstaying" placeholder="3">
-                <!-- END -->
+                <div id="4">
+                <label for="extrapurchase">Extra money for gifts:</label>
+                <input type="number" name="trip[extrapurchase]" value="0" id="extracash">
+                <label for="tripdays">Days staying:</label>
+                <input type="number" name="trip[tripdays]" value="0" id="totaldays">
+                <button>Submit</button>
+                <p id="totalValue"></p>
+                </div>
+              </fieldset>
+            </form>
+
+            <form id="bandn">
+              <fieldset>
+                <button id="back"><</button>
+                <button id="next">></button>
               </fieldset>
             </form>
           </div>
@@ -147,12 +289,12 @@
             <fieldset>
               <input type="password" name="passwords[old]" placeholder="Old password">
               <input type="password" name="passwords[new]" placeholder="New password">
-              <input class="btn btn-outline-success" type="submit" value="Change password">
+              <input class="btn btn-outline-primary" type="submit" value="Change password">
             </fieldset>
           </form>
           <form id="sign-out">
              <fieldset>
-               <input class="btn btn-outline-success" type="submit" value="Sign out">
+               <input class="btn btn-outline-primary" type="submit" value="Sign out">
              </fieldset>
           </form>
         </div>

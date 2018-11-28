@@ -2,11 +2,6 @@ const getFormFields = require('../../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const signedIn = () => {
-  $('.main').show()
-  $('.login-page').hide()
-}
-
 const onSignUp = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -43,6 +38,5 @@ module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onChangePassword,
-  signedIn
+  onChangePassword
 }

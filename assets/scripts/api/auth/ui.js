@@ -1,5 +1,5 @@
 const store = require('../../store.js')
-const ae = require('./events.js')
+const authext = require('./extra.js')
 
 const signUpSuccess = data => {
   $('#authmessage').empty()
@@ -16,8 +16,9 @@ const signUpFailure = error => {
 }
 
 const signInSuccess = data => {
-  ae.signedIn()
+  authext.signedIn()
   $('#authmessage').empty()
+  $('#authmessage').text('Signed in')
   store.user = data.user
   $('#message').removeClass()
   store.email = data.user.email
@@ -36,6 +37,7 @@ const changePasswordSuccess = data => {
   $('#message').empty()
   $('#authmessage').text('Password changed')
   $('#message').removeClass()
+  $('#change-password')[0].reset()
 }
 
 const changePasswordFailure = error => {
@@ -43,9 +45,11 @@ const changePasswordFailure = error => {
   $('#authmessage').text('Error on password change')
   $('#authmessage').removeClass()
   $('#authmessage').addClass('failure')
+  $('#change-password')[0].reset()
 }
 
 const signOutSuccess = data => {
+  authext.signedOut()
   $('#message').empty()
   $('#welcome').empty()
   store.user = null
