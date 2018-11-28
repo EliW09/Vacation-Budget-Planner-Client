@@ -1,0 +1,48 @@
+Type of trip:
+- Airplane
+- Car
+- Train
+
+Staying in a hotel:
+- Yes
+- No
+
+Getting a rental car:
+- Yes
+- No
+
+Going to any parks or events:
+- Yes
+- No
+
+
+Airplane:
+- Ticket price
+- Amount of tickets
+
+Train:
+- Ticket price
+- Amount of tickets
+
+Car:
+- Miles
+- Miles per gallon
+
+Hotel[Yes]:
+- How many nights
+- Price per night
+- how many rooms
+
+Rental[Yes]:
+- How many days
+- Price per day
+
+Parks or events:
+- People going
+- Admissions ticket price
+
+
+Extra:
+- Total people going
+- how long is trip
+- Side money for gifts and shopping
