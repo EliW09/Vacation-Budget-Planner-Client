@@ -8,6 +8,7 @@
 const authEvents = require('./api/auth/events.js')
 const dataEvents = require('./api/data/events.js')
 const form = require('./forms/main.js')
+const extrapi = require('./extraapi.js')
 
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -56,6 +57,9 @@ $(() => {
 
   $('#acc').on('click', form.signedIn)
   $('#goBack').on('click', form.signedInDone)
+
+  $('#getgeo').on('click', extrapi.getLocation)
+  $('#thewea').on('click', dataEvents.onGrabWeather)
 
   $(document).ready(form.makeNewForm)
 })

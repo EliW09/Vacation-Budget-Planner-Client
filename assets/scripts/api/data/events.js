@@ -40,9 +40,19 @@ const onEditBudgetPlan = (event) => {
     .catch(ui.editFailure)
 }
 
+const onGrabWeather = (event) => {
+  event.preventDefault()
+  const lat = store.lat
+  const long = store.long
+  api.grabWeather(lat, long)
+    // .then(ui.weatherSuccess)
+    // .catch(ui.weatherFailure)
+}
+
 module.exports = {
   onNewBudgetPlan,
   onGrabBudgetPlans,
   onDeleteBudgetPlan,
-  onEditBudgetPlan
+  onEditBudgetPlan,
+  onGrabWeather
 }

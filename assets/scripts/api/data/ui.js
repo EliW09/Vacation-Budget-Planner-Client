@@ -61,6 +61,18 @@ const editFailure = error => {
   $('#authmessage').addClass('failure')
 }
 
+const weatherSuccess = data => {
+  $('#currentweather').empty()
+  $('#currentweather').text(data)
+}
+
+const weatherFailure = error => {
+  $('#currentweather').empty()
+  $('#currentweather').text('Error on editting budget')
+  $('#currentweather').removeClass()
+  $('#currentweather').addClass('failure')
+}
+
 module.exports = {
   budgetSuccess,
   budgetFailure,
@@ -69,5 +81,7 @@ module.exports = {
   deleteSuccess,
   deleteFailure,
   editSuccess,
-  editFailure
+  editFailure,
+  weatherSuccess,
+  weatherFailure
 }
