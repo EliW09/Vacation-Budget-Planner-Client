@@ -5,7 +5,7 @@ const budgetSuccess = data => {
 
 const budgetFailure = error => {
   $('#authmessage').empty()
-  $('#authmessage').text('Error on making new budget')
+  $('#authmessage').text('Error on making new budget.')
   $('#authmessage').removeClass()
   $('#authmessage').addClass('failure')
 }
@@ -32,31 +32,31 @@ const grabSuccess = data => {
 
 const grabFailure = error => {
   $('#authmessage').empty()
-  $('#authmessage').text('Error on grabbing budgets')
+  $('#authmessage').text('Error on grabbing budgets.')
   $('#authmessage').removeClass()
   $('#authmessage').addClass('failure')
 }
 
 const deleteSuccess = data => {
   $('#authmessage').empty()
-  $('#authmessage').text('Deleted budget')
+  $('#authmessage').text('Deleted budget.')
 }
 
 const deleteFailure = error => {
   $('#authmessage').empty()
-  $('#authmessage').text('Error on deleting budget')
+  $('#authmessage').text('Error on deleting budget.')
   $('#authmessage').removeClass()
   $('#authmessage').addClass('failure')
 }
 
 const editSuccess = data => {
   $('#authmessage').empty()
-  $('#authmessage').text('Editted budget')
+  $('#authmessage').text('Editted budget.')
 }
 
 const editFailure = error => {
   $('#authmessage').empty()
-  $('#authmessage').text('Error on editting budget')
+  $('#authmessage').text('Error on editting budget.')
   $('#authmessage').removeClass()
   $('#authmessage').addClass('failure')
 }
@@ -72,7 +72,7 @@ const weatherSuccess = data => {
 const weatherFailure = error => {
   $('#currentweather').empty()
   $('#dumpinfo').empty()
-  $('#currentweather').text('Error on editting budget')
+  $('#currentweather').text('Error on getting the weather.')
   $('#currentweather').removeClass()
   $('#currentweather').addClass('failure')
 }

@@ -29,6 +29,7 @@ const signedOut = () => {
   $('#goBack').hide()
   $('.account-page').hide()
   $('.login-page').show()
+  $('#authmessage').empty()
 }
 
 module.exports = {
