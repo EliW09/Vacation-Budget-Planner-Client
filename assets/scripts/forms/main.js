@@ -317,6 +317,7 @@ const savePer = () => {
   const nineMonths = fullTotal / 270 * 7
   const twelveMonths = fullTotal / 360 * 7
 
+  $('#totalValue').empty()
   $('#totalValue').text(`To go on this trip in 3 months, you need to save $${threeMonths.toFixed(2)} a week.\n To go on this trip in 6 months, you need to save $${sixMonths.toFixed(2)} a week.\n To go on this trip in 9 months, you need to save $${nineMonths.toFixed(2)} a week.\n To go on this trip in 12 months, you need to save $${twelveMonths.toFixed(2)} a week.`)
 }
 

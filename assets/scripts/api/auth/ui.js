@@ -16,9 +16,9 @@ const signUpFailure = error => {
 }
 
 const signInSuccess = data => {
-  authext.signedIn()
   $('#authmessage').empty()
   $('#authmessage').text('Signed in')
+  authext.signedIn()
   store.user = data.user
   $('#message').removeClass()
   store.email = data.user.email

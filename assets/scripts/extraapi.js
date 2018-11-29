@@ -6,12 +6,14 @@ const getLocation = (event) => {
     navigator.geolocation.getCurrentPosition(showPosition)
   } else {
     $('#dumpinfo').empty()
+    $('#currentweather').empty()
     $('#dumpinfo').text("Geolocation isn't supported by your browser.")
   }
 }
 
 const showPosition = (position) => {
   $('#dumpinfo').empty()
+  $('#currentweather').empty()
   $('#dumpinfo').text('Latitude and Longitude grabbed and set.')
   store.lat = position.coords.latitude
   store.long = position.coords.longitude

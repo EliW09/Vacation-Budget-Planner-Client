@@ -1,4 +1,5 @@
 const signedIn = () => {
+  $('#authmessage').empty()
   $('.main').show()
   $('.innermain').show()
 

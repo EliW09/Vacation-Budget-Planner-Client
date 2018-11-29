@@ -63,11 +63,15 @@ const editFailure = error => {
 
 const weatherSuccess = data => {
   $('#currentweather').empty()
-  $('#currentweather').text(data)
+  $('#dumpinfo').empty()
+  const theTemp = data.currently.temperature
+  const theSummary = data.currently.summary
+  $('#currentweather').text(`It is currently ${theSummary} and ${theTemp} degrees today.`)
 }
 
 const weatherFailure = error => {
   $('#currentweather').empty()
+  $('#dumpinfo').empty()
   $('#currentweather').text('Error on editting budget')
   $('#currentweather').removeClass()
   $('#currentweather').addClass('failure')

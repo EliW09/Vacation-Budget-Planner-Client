@@ -6,9 +6,9 @@ const form = require('../../forms/main.js')
 
 const onNewBudgetPlan = (event) => {
   event.preventDefault()
+  $('#totalValue').empty()
   form.savePer()
   const data = getFormFields(event.target)
-  JSON.stringify(data)
   api.newBudgetPlan(data)
     .then(ui.budgetSuccess)
     .catch(ui.budgetFailure)
@@ -45,8 +45,8 @@ const onGrabWeather = (event) => {
   const lat = store.lat
   const long = store.long
   api.grabWeather(lat, long)
-    // .then(ui.weatherSuccess)
-    // .catch(ui.weatherFailure)
+    .then(ui.weatherSuccess)
+    .catch(ui.weatherFailure)
 }
 
 module.exports = {
