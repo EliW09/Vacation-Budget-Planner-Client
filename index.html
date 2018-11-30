@@ -43,6 +43,7 @@
 
       <div class="main">
         <div class="innermain">
+          <p>To create a new budget plan, click the "New budget plan" button. To edit a plan you need to change data on, click the "Edit a plan" button and input all your data including the target id. To collect all your budget plans, click "All budget plans" than "Show budgets". To delete a plan you don't need anymore put the id of the plan.
           <button id="grabbudgets">All budget plans</button>
           <button id="newbudget">New budget plan</button>
           <button id="editbudget">Edit a plan</button>
@@ -60,7 +61,7 @@
           <div class="grabBudgetForm">
             <form id="grabform">
               <!-- Stuff here -->
-              <button id="grab">Grab budgets</button>
+              <button id="grab">Show budgets</button>
               <div id="trips" class="trips"></div>
             </form>
           </div>
@@ -77,7 +78,7 @@
                 <div id="planestuff-e">
                 <!-- Plane & Train forms -->
                   <label for="ticketprice">Ticket price:</label>
-                  <input type="number" name="trip[ticketprice]" placeholder="325" step="0.01">
+                  <input type="number" name="trip[ticketprice]" placeholder="325" step="0.01"><br>
                   <label for="ticketamount">Number of tickets:</label>
                   <input type="number" name="trip[ticketamount]" placeholder="1" step="0.01">
                 <!-- END -->
@@ -86,7 +87,7 @@
                 <div id="carstuff-e">
                 <!-- Car forms -->
                   <label for="miles_to_drive">Miles to drive:</label>
-                  <input type="number" name="trip[miles_to_drive]" placeholder="50" step="0.01">
+                  <input type="number" name="trip[miles_to_drive]" placeholder="50" step="0.01"><br>
                   <label for="miles_per_gallon">Miles per gallon:</label>
                   <input type="number" name="trip[miles_per_gallon]" placeholder="22" step="0.01">
                 <!-- END -->
@@ -101,9 +102,9 @@
                 <div id="hotelst-e">
                 <!-- Hotel forms -->
                   <label for="nightprice">Price per night for hotel:</label>
-                  <input type="number" name="trip[nightprice]" placeholder="79" step="0.01">
+                  <input type="number" name="trip[nightprice]" placeholder="79" step="0.01"><br>
                   <label for="hotelnights">Nights staying:</label>
-                  <input type="number" name="trip[hotelnights]" placeholder="2" step="0.01">
+                  <input type="number" name="trip[hotelnights]" placeholder="2" step="0.01"><br>
                   <label for="rooms">How many rooms:</label>
                   <input type="number" name="trip[rooms]" placeholder="1" step="0.01">
                 <!-- END -->
@@ -118,7 +119,7 @@
                 <div id="rentalstuff-e">
                 <!-- Rental Car forms -->
                   <label for="rentalprice">Rental car price per day:</label>
-                  <input type="number" name="trip[rentalprice]" placeholder="75" step="0.01">
+                  <input type="number" name="trip[rentalprice]" placeholder="75" step="0.01"><br>
                   <label for-"rentaldays">Days using rental:</label>
                   <input type="number" name="trip[rentaldays]" placeholder="3" step="0.01">
                 <!-- END -->
@@ -133,7 +134,7 @@
                 <div id="eventstuff-e">
                 <!-- Parks and Events forms -->
                   <label for="eventprice">Admissions price:</label>
-                  <input type="number" name="trip[eventsprice]" placeholder="140" step="0.01">
+                  <input type="number" name="trip[eventsprice]" placeholder="140" step="0.01"><br>
                   <label for="eventpeople">People attending:</label>
                   <input type="number" name="trip[eventpeople]" placeholder="2" step="0.01">
                 <!-- END -->
@@ -142,9 +143,9 @@
 
                 <div id="4-e">
                 <label for="extrapurchase">Extra money for gifts:</label>
-                <input type="number" name="trip[extrapurchase]" placeholder="1" step="0.01">
+                <input type="number" name="trip[extrapurchase]" placeholder="1" step="0.01"><br>
                 <label for="tripdays">Days staying:</label>
-                <input type="number" name="trip[tripdays]" placeholder="3" step="0.01">
+                <input type="number" name="trip[tripdays]" placeholder="3" step="0.01"><br>
                 <br>
                 <label for="id">ID:</label>
                 <input type='text' name='trip[id]' placeholder="1" step="0.01">
@@ -183,7 +184,7 @@
                 <div id="planestuff">
                 <!-- Plane & Train forms -->
                   <label for="ticketprice">Ticket price:</label>
-                  <input type="number" name="trip[ticketprice]" value="0" id="ticketprice" step="0.01">
+                  <input type="number" name="trip[ticketprice]" value="0" id="ticketprice" step="0.01"><br>
                   <label for="ticketamount">Number of tickets:</label>
                   <input type="number" name="trip[ticketamount]" value="0" id="numberoftickets" step="0.01">
                 <!-- END -->
@@ -192,7 +193,7 @@
                 <div id="carstuff">
                 <!-- Car forms -->
                   <label for="miles_to_drive">Miles to drive:</label>
-                  <input type="number" name="trip[miles_to_drive]" value="50" id="miles" step="0.01">
+                  <input type="number" name="trip[miles_to_drive]" value="50" id="miles" step="0.01"><br>
                   <label for="miles_per_gallon">Miles per gallon:</label>
                   <input type="number" name="trip[miles_per_gallon]" value="25" id="mpg" step="0.01">
                 <!-- END -->
@@ -207,9 +208,9 @@
                 <div id="hotelstuff">
                 <!-- Hotel forms -->
                   <label for="nightprice">Price per night for hotel:</label>
-                  <input type="number" name="trip[nightprice]" value="0" id="nightcost" step="0.01">
+                  <input type="number" name="trip[nightprice]" value="0" id="nightcost" step="0.01"><br>
                   <label for="hotelnights">Nights staying:</label>
-                  <input type="number" name="trip[hotelnights]" value="0" id="nightstay" step="0.01">
+                  <input type="number" name="trip[hotelnights]" value="0" id="nightstay" step="0.01"><br>
                   <label for="rooms">How many rooms:</label>
                   <input type="number" name="trip[rooms]" value="0" id="rooms" step="0.01">
                 <!-- END -->
@@ -224,7 +225,7 @@
                 <div id="rentalstuff">
                 <!-- Rental Car forms -->
                   <label for="rentalprice">Rental car price per day:</label>
-                  <input type="number" name="trip[rentalprice]" value="0" id="rentday" step="0.01">
+                  <input type="number" name="trip[rentalprice]" value="0" id="rentday" step="0.01"><br>
                   <label for-"rentaldays">Days using rental:</label>
                   <input type="number" name="trip[rentaldays]" value="0" id="rentdays" step="0.01">
                 <!-- END -->
@@ -239,7 +240,7 @@
                 <div id="eventstuff">
                 <!-- Parks and Events forms -->
                   <label for="eventprice">Admissions price:</label>
-                  <input type="number" name="trip[eventsprice]" value="0" id="eventpprice" step="0.01">
+                  <input type="number" name="trip[eventsprice]" value="0" id="eventpprice" step="0.01"><br>
                   <label for="eventpeople">People attending:</label>
                   <input type="number" name="trip[eventpeople]" value="0" id="eventppeople" step="0.01">
                 <!-- END -->
@@ -248,7 +249,7 @@
 
                 <div id="4">
                 <label for="extrapurchase">Extra money for gifts:</label>
-                <input type="number" name="trip[extrapurchase]" value="0" id="extracash" step="0.01">
+                <input type="number" name="trip[extrapurchase]" value="0" id="extracash" step="0.01"><br>
                 <label for="tripdays">Days staying:</label>
                 <input type="number" name="trip[tripdays]" value="0" id="totaldays" step="0.01">
                 <button>Submit</button>
